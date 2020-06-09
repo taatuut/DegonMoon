@@ -12,5 +12,6 @@ let mongoose = require('mongoose'),
     CONNECTION_OPTIONS = { useNewUrlParser: true, useUnifiedTopology: true, useCreateIndex: true, useUnifiedTopology: true };
 
 mongoose.connect(ATLAS_CONNECTION, CONNECTION_OPTIONS, () => { console.log("[+] Succesfully connected to database."); });
+mongoose.disconnect();
 
 /* EOF */
