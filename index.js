@@ -1,3 +1,16 @@
-var mongoose = require('mongoose');
+/**
+ * 
+ * @summary Uses MongooseJS to Connect to MongoDB and write connection status to console
+ * @author taatuut
+ *
+ */
 
-mongoose.connect('mongodb+srv://dbAdam:dbHalsema2020%23@cluster0-1pg7l.azure.mongodb.net/test', () => { console.log("[+] Succesfully connected to database."); });
+ require('dotenv').config();
+
+let mongoose = require('mongoose'),
+    ATLAS_CONN = 'mongodb+srv://'+process.env.ATLAS_USERNAME+':'+process.env.ATLAS_PASSWORD+'@'+process.env.ATLAS_CLUSTER+'/'+process.env.ATLAS_DATABASE,
+    ATLAS_OPTIONS = { useNewUrlParser: true, useUnifiedTopology: true };
+
+mongoose.connect(ATLAS_CONN, ATLAS_OPTIONS, () => { console.log("[+] Succesfully connected to database."); });
+
+/* EOF */
