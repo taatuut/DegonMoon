@@ -1,0 +1,11 @@
+{
+  "name": "DegonMoon",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "https://github.com/taatuut/DegonMoon.git",
+  "author": "Emil Zegers <e.zegers@upcmail.nl>",
+  "license": "MIT",
+  "dependencies": {
+    "mongoose": "^5.9.18"
+  }
+}
